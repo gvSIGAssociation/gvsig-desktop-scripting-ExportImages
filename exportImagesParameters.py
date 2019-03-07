@@ -6,24 +6,39 @@ from org.gvsig.export.spi import AbstractExportParametersGeometry
 
 class ExportImagesParameters(AbstractExportParametersGeometry,HasAFile):
   def __init__(self):
-    self.useUniqueName = True #boolean
     self.folderFile  = None #file
+    self.imageField = None
+    self.imageFormat = None
+    self.imageOutputOption = None
   def needsSelectTargetProjection(self):
     return False # para que saque el panel de proyeccion
+    
   def getServiceName(self):
     pass
-  def getFile(self):
-    return self.folderFile
-  def setFile(self, folderFile):
-    self.folderFile = folderFile
-  def getUseUniqueName(self):
-    return self.useUniqueName
-  def setUseUniqueName(self, uniqueName):
-    self.useUniqueName = uniqueName
+    
+  def getImageField(self):
+    return self.imageField
+    
+  def setImageField(self, imageField):
+    self.imageField = imageField
+    
+  def getImageFormat(self):
+    return self.imageFormat
+    
+  def setImageFormat(self, imageFormat):
+    self.imageFormat = imageFormat
+    
+  def getImageOutputOption(self):
+    return self.imageOutputOption
+    
+  def setImageOutputOption(self, imageOutputOption):
+    self.imageOutputOption = imageOutputOption
  
 def main(*args):
 
     #Remove this lines and add here your code
 
     print "hola mundo"
+    params = ExportImagesParameters()
+    print dir(params)
     pass

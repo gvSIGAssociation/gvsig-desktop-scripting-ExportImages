@@ -12,8 +12,8 @@ class ExportImagesFactory(AbstractExportServiceFactory):
     AbstractExportServiceFactory.__init__(
       self,
       SERVICE_NAME,
-      "_Export Images",
-      "_Export_Images"
+      "_Export_Images_from_field",
+      "_Export_Images_from_field"
       )
   def createService(self,parameters):
     return ExportImagesService(self, parameters)
@@ -22,9 +22,9 @@ class ExportImagesFactory(AbstractExportServiceFactory):
     return ExportImagesParameters()
     
   def hasTabularSupport(self):
-        return True
+    return True
         
   def hasVectorialSupport(self):
-        return True
+    return True
 def main(*args):
     egf = ExportImagesFactory()

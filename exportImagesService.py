@@ -12,6 +12,7 @@ from java.util import ArrayList
 from gvsig import commonsdialog
 from gvsig import currentView
 from gvsig import openStore
+from addons.ExportImages.libexportimage.processExportImage import processExportImage
 
 import os
 
@@ -54,22 +55,10 @@ class ExportImagesService(ExportService):
     
   def export(self, featureSet):
     # Export images process
-    self.taskStatus.setRangeOfValues(0, featureSet.getSize())
-    n = 0
-
-    pathresultados = self.getParameters().getFile().getAbsolutePath() #fpanel.txtPath.getText()
-    if not os.path.exists(pathresultados) and not pathresultados=='':
-      commonsdialog.msgbox("Ruta de carpeta invalida")
-      return
-      
-    for feature in featureSet: #.features():
-      n+=1
-      self.taskStatus.setCurValue(n)
-      if self.taskStatus.isCancellationRequested():
-          return
-
-      
-      #self.getTargetOpenStoreParameters().add(gmlparams)
+    field = self.getParameters().getImageField()
+    formatName = self.getParameters().getImageFormat()
+    outparams = self.getParameters().getImageOutputOption()
+    processExportImage(featureSet, field, formatName, outparams, self.taskStatus)
   
     
 def main(*args):
