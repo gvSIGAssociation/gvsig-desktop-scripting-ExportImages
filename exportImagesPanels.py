@@ -60,14 +60,22 @@ class ImagesPanelOptions(FormPanel, ExportPanel):
   def __init__(self, processPanel, parameters):
     ExportPanel.__init__(self)
     FormPanel.__init__(self, gvsig.getResource(__file__,"exportImagesPanels.xml"))
+    # Translate
+    toolsSwingManager = ToolsSwingLocator.getToolsSwingManager()
+    toolsSwingManager.translate(self.lblFieldImages)
+    toolsSwingManager.translate(self.lblImageFormat)
+    toolsSwingManager.translate(self.lblOutputPathParameters)
+    toolsSwingManager.translate(self.rdbOption1)
+    toolsSwingManager.translate(self.rdbOption2)
+    toolsSwingManager.translate(self.rdbOption3)
+    
     # hay un picker para folder
     self.pickerFolder = None
     self.processPanel = processPanel
     self.params = parameters
     self.store = gvsig.currentLayer().getFeatureStore()
     self.initComponents()
-  def btnTest_click(self,*args):
-    self.nextPanel()
+
   def initComponents(self):
     dialogTitle = "_Select_folder"
     fileChooserID = "idPathGMLSelector"

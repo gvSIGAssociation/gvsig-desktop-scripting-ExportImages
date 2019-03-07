@@ -27,7 +27,7 @@
    <at name="id">/home/osc/gvSIG/plugins/org.gvsig.scripting.app.mainplugin/2.5.0/scripts/addons/ExportImages/exportImagesPanels.xml</at>
    <at name="path">addons/ExportImages/exportImagesPanels.xml</at>
    <at name="rowspecs">CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,CENTER:6PX:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE,CENTER:DEFAULT:NONE</at>
-   <at name="colspecs">FILL:DEFAULT:NONE,FILL:DEFAULT:NONE,FILL:77PX:GROW(1.0),FILL:DEFAULT:NONE,FILL:DEFAULT:NONE</at>
+   <at name="colspecs">FILL:DEFAULT:NONE,FILL:DEFAULT:NONE,FILL:77PX:GROW(1.0),FILL:DEFAULT:NONE</at>
    <at name="components">
     <object classname="java.util.LinkedList">
      <item >
@@ -74,9 +74,9 @@
               </at>
              </object>
             </at>
-            <at name="name"></at>
-            <at name="width">140</at>
-            <at name="text">_Field_with_images_data</at>
+            <at name="name">lblFieldImages</at>
+            <at name="width">133</at>
+            <at name="text">_Field_with_data_image</at>
             <at name="fill">
              <object classname="com.jeta.forms.store.properties.effects.PaintProperty">
               <at name="name">fill</at>
@@ -135,7 +135,7 @@
              </object>
             </at>
             <at name="name">cmbImageField</at>
-            <at name="width">513</at>
+            <at name="width">536</at>
             <at name="items">
              <object classname="com.jeta.forms.store.properties.ItemsProperty">
               <at name="name">items</at>
@@ -193,8 +193,8 @@
               </at>
              </object>
             </at>
-            <at name="width">140</at>
-            <at name="name"/>
+            <at name="name">lblImageFormat</at>
+            <at name="width">133</at>
             <at name="text">_Image_format</at>
             <at name="fill">
              <object classname="com.jeta.forms.store.properties.effects.PaintProperty">
@@ -254,7 +254,7 @@
              </object>
             </at>
             <at name="name">cmbImageFormat</at>
-            <at name="width">513</at>
+            <at name="width">536</at>
             <at name="items">
              <object classname="com.jeta.forms.store.properties.ItemsProperty">
               <at name="name">items</at>
@@ -312,9 +312,9 @@
               </at>
              </object>
             </at>
-            <at name="width">657</at>
-            <at name="name"/>
-            <at name="text">_Output_path_parameters</at>
+            <at name="name">lblOutputPathParameters</at>
+            <at name="width">673</at>
+            <at name="text">_Output_parameters_for_image_path</at>
             <at name="fill">
              <object classname="com.jeta.forms.store.properties.effects.PaintProperty">
               <at name="name">fill</at>
@@ -402,7 +402,7 @@
                   </object>
                  </at>
                  <at name="name">rdbOption1</at>
-                 <at name="width">636</at>
+                 <at name="width">652</at>
                  <at name="text">_Use_absolute_path_in_field</at>
                  <at name="height">16</at>
                 </object>
@@ -464,8 +464,8 @@
                   </object>
                  </at>
                  <at name="name">rdbOption2</at>
-                 <at name="width">597</at>
-                 <at name="text">_Export_to_folder_using_name_in_field</at>
+                 <at name="width">613</at>
+                 <at name="text">_Use_image_name_in_field_and_save_in_directory</at>
                  <at name="selected">true</at>
                  <at name="height">16</at>
                 </object>
@@ -520,7 +520,7 @@
                   </object>
                  </at>
                  <at name="name">txtPath</at>
-                 <at name="width">578</at>
+                 <at name="width">594</at>
                  <at name="height">20</at>
                 </object>
                </at>
@@ -630,7 +630,7 @@
                   </object>
                  </at>
                  <at name="name">cmbPathField</at>
-                 <at name="width">617</at>
+                 <at name="width">633</at>
                  <at name="items">
                   <object classname="com.jeta.forms.store.properties.ItemsProperty">
                    <at name="name">items</at>
@@ -696,8 +696,8 @@
                   </object>
                  </at>
                  <at name="name">rdbOption3</at>
-                 <at name="width">597</at>
-                 <at name="text">_Export_to_absolute_path_using_an_expression</at>
+                 <at name="width">613</at>
+                 <at name="text">_Use_expression_to_create_output_path</at>
                  <at name="height">16</at>
                 </object>
                </at>
@@ -751,7 +751,7 @@
                   </object>
                  </at>
                  <at name="name">txtExp</at>
-                 <at name="width">578</at>
+                 <at name="width">594</at>
                  <at name="height">20</at>
                 </object>
                </at>
@@ -860,7 +860,7 @@
                   </object>
                  </at>
                  <at name="name">cmbPathFieldName</at>
-                 <at name="width">617</at>
+                 <at name="width">633</at>
                  <at name="items">
                   <object classname="com.jeta.forms.store.properties.ItemsProperty">
                    <at name="name">items</at>
@@ -989,62 +989,6 @@
        </object>
       </at>
      </item>
-     <item >
-      <at name="value">
-       <object classname="com.jeta.forms.store.memento.BeanMemento">
-        <super classname="com.jeta.forms.store.memento.ComponentMemento">
-         <at name="cellconstraints">
-          <object classname="com.jeta.forms.store.memento.CellConstraintsMemento">
-           <at name="column">3</at>
-           <at name="row">8</at>
-           <at name="colspan">1</at>
-           <at name="rowspan">1</at>
-           <at name="halign">default</at>
-           <at name="valign">default</at>
-           <at name="insets" object="insets">0,0,0,0</at>
-          </object>
-         </at>
-         <at name="componentclass">com.jeta.forms.gui.form.StandardComponent</at>
-        </super>
-        <at name="jetabeanclass">com.jeta.forms.gui.beans.JETABean</at>
-        <at name="beanclass">javax.swing.JButton</at>
-        <at name="beanproperties">
-         <object classname="com.jeta.forms.store.memento.PropertiesMemento">
-          <at name="classname">javax.swing.JButton</at>
-          <at name="properties">
-           <object classname="com.jeta.forms.store.support.PropertyMap">
-            <at name="border">
-             <object classname="com.jeta.forms.store.properties.CompoundBorderProperty">
-              <super classname="com.jeta.forms.store.properties.BorderProperty">
-               <at name="name">border</at>
-              </super>
-              <at name="borders">
-               <object classname="java.util.LinkedList">
-                <item >
-                 <at name="value">
-                  <object classname="com.jeta.forms.store.properties.DefaultBorderProperty">
-                   <super classname="com.jeta.forms.store.properties.BorderProperty">
-                    <at name="name">border</at>
-                   </super>
-                  </object>
-                 </at>
-                </item>
-               </object>
-              </at>
-             </object>
-            </at>
-            <at name="actionCommand">JButton</at>
-            <at name="name">btnTest</at>
-            <at name="width">513</at>
-            <at name="text">JButton</at>
-            <at name="height">22</at>
-           </object>
-          </at>
-         </object>
-        </at>
-       </object>
-      </at>
-     </item>
     </object>
    </at>
    <at name="properties">
@@ -1104,28 +1048,28 @@
      <at name="rows">
       <object classname="[Ljava.lang.Object;" size="8">
        <at name="item" index="0">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
        <at name="item" index="1">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
        <at name="item" index="2">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
        <at name="item" index="3">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
        <at name="item" index="4">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
        <at name="item" index="5">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
        <at name="item" index="6">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
        <at name="item" index="7">
-        <object classname="[Ljava.lang.Object;" size="5"/>
+        <object classname="[Ljava.lang.Object;" size="4"/>
        </at>
       </object>
      </at>
