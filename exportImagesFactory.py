@@ -19,7 +19,7 @@ class ExportImagesFactory(AbstractExportServiceFactory):
     return ExportImagesService(self, parameters)
     
   def createParameters(self):
-    return ExportImagesParameters()
+    return ExportImagesParameters(self)
     
   def hasTabularSupport(self):
     return True

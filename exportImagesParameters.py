@@ -4,8 +4,9 @@ import gvsig
 from org.gvsig.tools.util import HasAFile
 from org.gvsig.export.spi import AbstractExportParametersGeometry
 
-class ExportImagesParameters(AbstractExportParametersGeometry,HasAFile):
-  def __init__(self):
+class ExportImagesParameters(AbstractExportParametersGeometry, HasAFile):
+  def __init__(self, factory):
+    AbstractExportParametersGeometry.__init__(self, factory)
     self.folderFile  = None #file
     self.imageField = None
     self.imageFormat = None

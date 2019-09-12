@@ -103,7 +103,7 @@ class ImagesPanelOptions(FormPanel, ExportPanel):
     eesmanager = ExpressionEvaluatorSwingLocator.getManager()
     self.pickerExp = eesmanager.createExpressionPickerController(self.txtExp, self.btnExp)
 
-    self.pickerExpStore= swm.createFeatureStoreElement(self.pickerExp)
+    self.pickerExpStore= swm.createFeatureStoreElement(self.store)
     self.pickerExp.addElement(self.pickerExpStore)
     # Input
     ## Layer
