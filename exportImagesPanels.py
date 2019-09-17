@@ -156,17 +156,45 @@ class ImagesPanelOptions(FormPanel, ExportPanel):
     self.pickerFolder.set(initialPath)
     self.pickerFolder.setFileFilter(MyFileFilter())
     self._updateAllUI()
+      
+    imageOutput = None
+    if self.params.getImageField()!=None:
+      self.pickerFieldsImageData.set(self.params.getImageField())
+    if self.params.getImageFormat()!=None:
+      self.cmbImageFormat.setSelectedItem(self.params.getImageFormat())
     
+    if self.params.getImageOutputOption()!= None:
+      imageOutput = self.params.getImageOutputOption()
+    if imageOutput!=None:
+      option = imageOutput["option"]
+      oparams = imageOutput["params"]
+      if option==1:
+        self.rdbOption1.setSelected(True)
+        op = oparams["path"]
+        self.pickerFieldsPath.set(op)
+      elif option==2:
+        self.rdbOption2.setSelected(True)
+        op = oparams["path"]
+        self.pickerFolder.set(op)
+        of = oparams["field"]
+        self.pickerFieldsName.set(of)
+      elif option==3:
+        self.rdbOption3.setSelected(True)
+        oe = oparams["expression"]
+        self.pickerExp.set(oe)
+        
+     
   def previousPanel(self):
     pass
+    
   def nextPanel(self):
     #recoger valores del formulario y guardarlos en parameters
     self.params.setImageField(self.pickerFieldsImageData.get())
     self.params.setImageFormat(self.cmbImageFormat.getSelectedItem())
     if self.rdbOption1.isSelected():
-      outparams={"option":1,"params":{"path",self.pickerFieldsPath.get()}} #DefaultFeatureAttributeDescriptor
+      outparams={"option":1,"params":{"path",self.pickerFieldsPath.getName()}} #DefaultFeatureAttributeDescriptor
     elif self.rdbOption2.isSelected():
-      outparams={"option":2,"params":{"field":self.pickerFieldsName.get(),"path":self.pickerFolder.get()}}
+      outparams={"option":2,"params":{"field":self.pickerFieldsName.getName(),"path":self.pickerFolder.get()}}
     elif self.rdbOption3.isSelected():
       outparams={"option":3,"params":{"expression":self.pickerExp.get()}}
     else:
@@ -193,7 +221,7 @@ class ImagesPanelOptions(FormPanel, ExportPanel):
     
 def main(*args):
 
-    g = ImagesPanelOptions(None, ExportImagesParameters())
+    g = ImagesPanelOptions(None,  ExportImagesParameters())
     g.showTool("")
     g.asJComponent()
     g.nextPanel()

@@ -5,13 +5,14 @@ from org.gvsig.export.spi import AbstractExportServiceFactory
 from exportImagesParameters import ExportImagesParameters
 from exportImagesService import ExportImagesService
 
-SERVICE_NAME = "ExportImages"
+
 
 class ExportImagesFactory(AbstractExportServiceFactory):
+  SERVICE_NAME = "ExportImages"
   def __init__(self):
     AbstractExportServiceFactory.__init__(
       self,
-      SERVICE_NAME,
+      self.SERVICE_NAME,
       "_Export_Images_from_field",
       "_Export_Images_from_field"
       )
@@ -26,5 +27,7 @@ class ExportImagesFactory(AbstractExportServiceFactory):
         
   def hasVectorialSupport(self):
     return True
+    
 def main(*args):
     egf = ExportImagesFactory()
+    print egf.getServiceName()

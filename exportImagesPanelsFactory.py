@@ -2,12 +2,12 @@
 
 import gvsig
 from org.gvsig.export.swing.spi import AbstractExportPanelsFactory
-from exportImagesFactory import SERVICE_NAME
+from exportImagesFactory import ExportImagesFactory
 from exportImagesPanels import ExportImagesPanels
 
 class ExportImagesPanelsFactory(AbstractExportPanelsFactory):
   def __init__(self):
-    AbstractExportPanelsFactory.__init__(self, SERVICE_NAME)
+    AbstractExportPanelsFactory.__init__(self, ExportImagesFactory.SERVICE_NAME)
 
   def createPanels(self, processPanel, exportParameters):
     return ExportImagesPanels(self, processPanel, exportParameters)

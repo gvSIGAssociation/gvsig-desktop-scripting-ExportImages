@@ -49,9 +49,11 @@ class ExportImagesService(ExportService):
         if self._attributeNamesTranslator == None:
           self._attributeNamesTranslator = ExportLocator.getServiceManager().createAttributeNamesTranslator()
         return self._attributeNamesTranslator
+        
   def getTargetOpenStoreParameters(self): # return List<OpenDataStoreParameters> 
     # lista de parameters que se usan para abrir los ficheros que se han creado
-    return self._openStores
+    # return self._openStores
+    return None
     
   def export(self, featureSet):
     # Export images process
