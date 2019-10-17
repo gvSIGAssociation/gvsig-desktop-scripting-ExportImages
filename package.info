@@ -1,5 +1,5 @@
 #
-#Thu Oct 17 12:08:20 CEST 2019
+#Thu Oct 17 12:09:22 CEST 2019
 owner=gvSIG Association
 code=ExportImages
 java-version=j1_7
@@ -17,5 +17,6 @@ categories=Import And Export
 description=Export images from a field to a disk location
 owner-url=
 buildNumber=4
+download-url=https\://github.com/gvSIGAssociation/gvsig-desktop-scripting-ExportImages/releases/download/1.0.0-4/gvSIG-desktop-2.5.0-ExportImages-1.0.0-4-testing-all-all-j1_7.gvspkg
 gvSIG-version=2.5.0
 name=Export Images

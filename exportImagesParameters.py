@@ -38,10 +38,10 @@ class ExportImagesParameters(AbstractExportParametersGeometry, HasAFile):
     self.imageOutputOption = imageOutputOption
 
   def clone(self):
-    print "ExportImagesParameters trying to clone"
+    #print "ExportImagesParameters trying to clone"
     clone = AbstractExportParametersGeometry.clone(self)
-    print "clone: ", clone
-    print ".. done clone and return"
+    #print "clone: ", clone
+    #print ".. done clone and return"
     return clone
     
 def main(*args):

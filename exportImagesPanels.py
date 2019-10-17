@@ -200,7 +200,7 @@ class ImagesPanelOptions(FormPanel, ExportPanel):
     else:
       pass
     self.params.setImageOutputOption(outparams)
-    print "params:", self.params.getImageOutputOption()
+    #print "params:", self.params.getImageOutputOption()
 
   def getAllValidDocuments(self):
     application = ApplicationLocator.getManager()
