@@ -30,4 +30,4 @@ class ExportImagesFactory(AbstractExportServiceFactory):
     
 def main(*args):
     egf = ExportImagesFactory()
-    print egf.getServiceName()
+    egf.createParameters()
