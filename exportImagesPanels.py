@@ -73,7 +73,7 @@ class ImagesPanelOptions(FormPanel, ExportPanel):
     self.pickerFolder = None
     self.processPanel = processPanel
     self.params = parameters
-    self.store = gvsig.currentLayer().getFeatureStore()
+    self.store = parameters.getSourceFeatureStore()
     self.initComponents()
 
   def initComponents(self):
